@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAPS</title>
+    <title>WaterloggingsolutionBD</title>
 
     <!-- leafletjs JS & CSS file -->
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
@@ -19,44 +19,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="container-fluid">
-    <div class="container">
-        <div class="icon">------</div>
-        <div class="temp">-°C</div>
-        <div class="summary">----</div>
-        <div class="location"></div>
-        <div class="icon">------</div>
-    </div>
-    <header class="text-center mt-5">
-        <div class="row justify-content-center">
-            <div class="col-4">
-                <button type="button" class="btn btn-lg btn-danger " id="home">Home</button>
-            </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-primary btn-lg " id="alternate">Alternate</button>
+<body class="container-fluid bg-info">
+    <ul class="nav navbar-dark bg-primary justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active text-white title mt-2" href="#">waterloggingsolutionBD</a>
+        </li>
+
+    </ul>
+    <header>
+        <div class="container">
+            <div class="row custom">
+                <div class="col-12 d-flex flex-column text-white justify-content-center align-items-center">
+                    <h2 class="mb-3 text-center">Save your time use waterlogging solution before starting your journey</h2>
+                    <button type="button" class="btn btn-primary btn-lg btn-block btn-custom mt-5"><a class="text-white text-wrap" href="main.html">Go to your destination </a></button>
+                </div>
             </div>
         </div>
+
+
+
     </header>
 
     <main>
-        <section class="container">
-            <div class="row justify-content-center my-5">
-                <div class="col-12 text-center">
-                    <input type="text" class="my-2" name="" id="location" value="23.8759, 90.3795" placeholder="Location">
-                </div>
-                <div class="col-12 text-center">
-                    <input type="text" name="" class="my-2" id="destination" value="" placeholder="Destination">
-                </div>
-            </div>
-        </section>
-        <div class="row justify-content-center mt-5">
-            <div class="col-12" id="map-1">
-                <div id="map"></div>
-            </div>
-            <div class="col-12" id="map-2">
-                <div id="map2"></div>
-            </div>
-        </div>
 
     </main>
     <!-- Bootstrap JS CDN  -->
