@@ -21,7 +21,7 @@ var latlngs3 = [
 ];
 // add an OpenStreetMap tile layer
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributor',
     maxZoom: 18
 }).addTo(map);
 
@@ -40,7 +40,7 @@ var map2 = L.map('map2').setView([23.8759, 90.3795], 16);
 
 // add an OpenStreetMap tile layer
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributor'
 }).addTo(map2);
 
 L.marker([23.8759, 90.3795]).addTo(map2)
