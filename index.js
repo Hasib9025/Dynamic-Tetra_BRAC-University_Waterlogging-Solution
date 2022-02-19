@@ -1,11 +1,13 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
-
-
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'your.mapbox.access.token'
-}).addTo(map);
+        var mymap = L.map('mapid').setView([28.612, 77.229], 13);
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mymap);
+        // making a marker
+        var marker = L.marker([28.614, 77.199]).addTo(mymap);
+        // making a circle on area
+        var circle = L.circle([28.612, 77.229], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 1000
+        }).addTo(mymap);
+        // adding popup to marker
+        marker.bindPopup("<b>Welcome to Rashtrapati Bhawan</b>.").openPopup();
