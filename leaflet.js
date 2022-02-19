@@ -1,10 +1,21 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
+// create a map in the "map" div, set the view to a given place and zoom
+var map = L.map('map').setView([48.858190, 2.294470], 16);
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'your.mapbox.access.token'
+// add an OpenStreetMap tile layer
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
+// add a marker in the given location, attach some popup content to it and open the popup
+L.marker([48.858190, 2.294470]).addTo(map)
+    .bindPopup('This is the Eiffel Tower<br> Easily customizable.')
+    .openPopup();
+
+
+// create a map in the "map" div, set the view to a given place and zoom
+var map2 = L.map('map2').setView([48.858190, 2.294470], 16);
+
+// add an OpenStreetMap tile layer
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map2);

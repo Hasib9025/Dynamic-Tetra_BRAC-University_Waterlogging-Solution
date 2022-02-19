@@ -1,6 +1,8 @@
 var map1 = document.getElementById("map-1")
 var map2 = document.getElementById("map-2")
 
+map2.style.display = "none";
+
 document.getElementById("home").addEventListener("click", function() {
     map1.style.display = "block";
     map2.style.display = "none";
