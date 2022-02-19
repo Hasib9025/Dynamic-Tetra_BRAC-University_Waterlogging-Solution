@@ -13,7 +13,8 @@
 
 
     <!-- Bootstrap CDN  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- css  -->
     <link rel="stylesheet" href="style.css">
@@ -48,7 +49,8 @@
         <section class="container">
             <div class="row justify-content-center my-5">
                 <div class="col-12 text-center">
-                    <input type="text" class="my-2" name="" id="location" value="23.8759, 90.3795" placeholder="Location">
+                    <input type="text" class="my-2" name="" id="location" value="23.8759, 90.3795"
+                        placeholder="Location">
                 </div>
                 <div class="col-12 text-center">
                     <input type="text" name="" class="my-2" id="destination" value="" placeholder="Destination">
@@ -66,13 +68,45 @@
 
     </main>
     <!-- Bootstrap JS CDN  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <!-- custom js  -->
     <script src="leaflet.js"></script>
     <script src="index.js"></script>
     <script src="weather.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+        import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBDdm6YA5JJFfFhhct5K8Q-TpRInO1GrAg",
+            authDomain: "waterlogging-solution-bd.firebaseapp.com",
+            projectId: "waterlogging-solution-bd",
+            storageBucket: "waterlogging-solution-bd.appspot.com",
+            messagingSenderId: "592217136974",
+            appId: "1:592217136974:web:acde5d8e0775a77e6d481f",
+            measurementId: "G-BTNH4EJK2M",
+            databaseURL: "https://waterlogging-solution-bd-default-rtdb.asia-southeast1.firebasedatabase.app/"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const locationRefs = ref(db);
+        get(child(locationRefs, 'locations')).then(
+            (snapshot) => {
+                console.log(snapshot.val());
+            }
+        );
+    </script>
 </body>
 
 </html>
