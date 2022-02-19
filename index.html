@@ -20,7 +20,13 @@
 </head>
 
 <body class="container">
-
+    <div class="container">
+        <div class="icon">------</div>
+        <div class="temp">-°C</div>
+        <div class="summary">----</div>
+        <div class="location"></div>
+        <div class="icon">------</div>
+    </div>
     <header class="text-center mt-5">
         <div class="row justify-content-center">
             <div class="col-4">
@@ -36,7 +42,7 @@
         <section class="container">
             <div class="row justify-content-center my-5">
                 <div class="col-12 text-center">
-                    <input type="text" class="my-2" name="" id="location" value="23.8759, 90.3795" placeholder="location">
+                    <input type="text" class="my-2" name="" id="location" value="23.8759, 90.3795" placeholder="Location">
                 </div>
                 <div class="col-12 text-center">
                     <input type="text" name="" class="my-2" id="destination" value="" placeholder="Destination">
@@ -60,6 +66,7 @@
     <!-- custom js  -->
     <script src="leaflet.js"></script>
     <script src="index.js"></script>
+    <script src="weather.js"></script>
 </body>
 
 </html>
